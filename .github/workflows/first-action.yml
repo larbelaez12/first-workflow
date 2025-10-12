@@ -1,0 +1,11 @@
+name: First Workflow #Nombre del Workflow
+on: workflow_dispatch #Evento a disparar el workflow - workflow_dispatch: de forma manual
+jobs: # Lista de Jobs a realizar en el WorkFlow
+  first-job: # Nombre del primer Job en este WorkFlow
+    runs-on: ubuntu-latest # Aprovisionamiento de la máquina virtual / última versión de ubuntu
+    steps: # Pasos de este job (fist-job)
+      # Ejecuta un solo comando usando el shell
+      - name: Print greeting #Nombre del primer paso
+        run: echo "Hello World!" # Primera acción del paso (comando u acciones a realizar)
+      - name: Print goodbye #Nombre del segundo paso
+        run: echo "Done - bye!" # Primera acción del paso (comando u acciones a realizar)
